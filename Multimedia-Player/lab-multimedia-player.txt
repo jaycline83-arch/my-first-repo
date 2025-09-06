@@ -12,8 +12,8 @@
   <h1>Jay's Media Player</h1>
   <section>
     <h2>Old School Track</h2>
-    <audio controls aria-label="tanzil-old-school-track">
-      <source src="audio/song.mp3" type="audio/mpeg">
+    <audio controls aria-label="old-school-track">
+      <source src="audio-song.mp3" type="audio/mpeg">
   </section>
   <section>
     <h2>Driving Video</h2>

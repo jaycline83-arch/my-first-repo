@@ -1,5 +1,8 @@
 #!/bin/bash
 # Auto-detect newest folder and push to GitHub Pages portfolio
+#!/bin/bash
+
+# Auto-detect newest folder and push to GitHub Pages portfolio
 
 # === Start SSH agent and add key ===
 eval "$(ssh-agent -s)" >/dev/null
@@ -15,14 +18,20 @@ COMMIT_MESSAGE="Add $PROJECT_NAME"
 
 # === Update homepage if a new project is detected ===
 if [ ! -z "$PROJECT_NAME" ]; then
-  sed -i "/<!-- PROJECT-LIST-END -->/i \  <li><a href=\"$PROJECT_NAME/\">$PROJECT_NAME</a> – $DESCRIPTION</li>" index.html
+  # Only add to index.html if not already present
+  if ! grep -q "$PROJECT_NAME" index.html; then
+    sed -i "/<!-- PROJECT-LIST-END -->/i \  <li><a href=\"$PROJECT_NAME/\">$PROJECT_NAME</a> – $DESCRIPTION</li>" index.html
+  fi
 fi
 
 # === Stage all changes ===
 git add .
 
-# === Commit changes ===
-git commit -m "$COMMIT_MESSAGE"
+# === Commit changes (only if there are staged changes) ===
+if ! git diff --cached --quiet; then
+  git commit -m "$COMMIT_MESSAGE"
+  git push origin main
+else
+  echo "No changes to commit."
+fi
 
-# === Push to GitHub ===
-git push origin main

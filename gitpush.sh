@@ -1,21 +1,38 @@
 #!/bin/bash
-# Quick Git push script for portfolio with automatic project links
+# Git push script for portfolio (auto pull, update homepage, commit, push)
 
+# === Input arguments ===
 PROJECT_NAME=$1
 DESCRIPTION=$2
 COMMIT_MESSAGE=$3
-# Default description if none provided
+
+# === Defaults ===
 if [ -z "$DESCRIPTION" ]; then
   DESCRIPTION="New project"
 fi
 
-# Default commit message if none provided
 if [ -z "$COMMIT_MESSAGE" ]; then
   COMMIT_MESSAGE="Add $PROJECT_NAME"
 fi
+
+# === Start SSH agent and add key ===
+eval "$(ssh-agent -s)" >/dev/null
+ssh-add ~/.ssh/ssh-key-private >/dev/null
+
+# === Pull remote changes safely ===
+git pull origin main --rebase
+
+# === Update homepage if a project name is provided ===
 if [ ! -z "$PROJECT_NAME" ]; then
   sed -i "/<!-- PROJECT-LIST-END -->/i \  <li><a href=\"$PROJECT_NAME/\">$PROJECT_NAME</a> – $DESCRIPTION</li>" index.html
 fi
+
+# === Stage all changes ===
 git add .
+
+# === Commit changes ===
 git commit -m "$COMMIT_MESSAGE"
-git push
+
+# === Push to GitHub ===
+git push origin main
+

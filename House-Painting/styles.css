@@ -1,0 +1,71 @@
+** start of styles.css **
+
+/* House container */
+#house {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background-color: lightyellow;
+  border: 3px solid black;
+  top: 100px;
+}
+
+/* Immediate children */
+#chimney, #roof, #window-1, #window-2, #door {
+  position: absolute;
+  border: 2px solid black;
+  background-color: lightblue;
+}
+
+/* Chimney */
+#chimney {
+  width: 50px;
+  height: 100px;
+  top: -100px;              /* at top of house */
+  left: 50px;
+  z-index: -1;         /* behind the house */
+  background-color: brown;
+  border: 2px solid black;
+}
+
+/* Roof */
+#roof {
+  width: 100%;
+  height: 80px;
+  top: 0;              /* required */
+  background-color: darkred;
+  border: 2px solid black;
+}
+
+/* Door */
+#door {
+  width: 80px;
+  height: 120px;
+  bottom: 0;           /* at bottom of house */
+  left: 210px;         /* centered within house */
+  background-color: sienna;
+  border: 2px solid black;
+}
+
+/* Windows */
+#window-1, #window-2 {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+}
+
+#window-1 {
+  top: 120px;          /* below roof, above 1/3 door height */
+  left: 100px;
+  border: 2px solid black;
+}
+
+#window-2 {
+  top: 120px;
+  right: 100px;
+  border: 2px solid black;
+}
+
+
+** end of styles.css **
+

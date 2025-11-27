@@ -1,0 +1,34 @@
+** start of styles.css **
+
+body {
+  background-color: #f4f4f4
+}
+
+.color-box {
+  width: 25vw;
+  height: 25vh;
+  
+}
+
+.color1 {
+  background-color: #39FF14;
+}
+
+.color2 {
+  background-color: rgb(128,0,128);
+}
+
+.color3 {
+  background-color: orange;
+}
+
+.color4 {
+  background-color: hsl(25,100%,10%);
+}
+
+.color5 {
+  background-color: red;
+}
+
+** end of styles.css **
+

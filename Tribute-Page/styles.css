@@ -1,0 +1,60 @@
+** start of styles.css **
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  padding: 20px;
+}
+
+#main {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#img-div {
+  text-align: center;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-caption {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+#tribute-info {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+#tribute-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#tribute-link {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+
+** end of styles.css **
+

@@ -1,0 +1,55 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form</title>
+</head>
+<body>
+  <h1 id="title">Customer Satisfaction Survey</h1>
+  <p id="description">Please take a minute to help us improve. Fields marked * are required.</p>
+  <form id="survey-form" action="#" method="post">
+    <label id="name-label" for="name">Name *</label>
+    <input id="name" name="name" type="text" placeholder="Enter full name" required>
+
+    <label id="email-label" for="email">Email *</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+    <label id="number-label" for="number">Age (1–100)</label>
+    <input id="number" name="age" type="number" min="1" max="100" placeholder="Enter age">
+    
+    <label for="dropdown">How did you hear about us?</label>
+    <select id="dropdown" name="referrer">
+      <option value="">Select an option</option>
+      <option value="friend">Friend or family</option>
+      <option value="social">Social media</option>
+      <option value="search">Search engine</option>
+      <option value="other">Other</option>
+    </select>
+      <p>Would you recommend us to a friend?</p>
+    <input type="radio" id="rec-yes" name="recommend" value="yes">
+    <label for="rec-yes">Yes</label>
+    <input type="radio" id="rec-no" name="recommend" value="no">
+    <label for="rec-no">No</label>
+      <p>What did you like? (Select all that apply)</p>
+    <input type="checkbox" id="like-quality" name="likes" value="quality">
+    <label for="like-quality">Quality</label>
+    <input type="checkbox" id="like-price" name="likes" value="price">
+    <label for="like-price">Price</label>
+    <input type="checkbox" id="like-support" name="likes" value="support">
+    <label for="like-support">Support</label>
+    <input type="checkbox" id="like-speed" name="likes" value="speed">
+    <label for="like-speed">Speed</label>
+    <label for="comments">Additional comments</label>
+    <textarea id="comments" name="comments" rows="5" placeholder="Tell us anything else…"></textarea>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
+
+
+** end of index.html **
+

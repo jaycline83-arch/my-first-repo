@@ -1,0 +1,183 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Technical Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav id="navbar">
+    <header>My Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#HTML_Basics">HTML Basics</a>
+    <a class="nav-link" href="#CSS_Basics">CSS Basics</a>
+    <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+    <a class="nav-link" href="#Summary">Summary</a>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+  <header>Introduction</header>
+  <p>This page is a simple technical documentation project.</p>
+  <p>It shows how to use HTML and CSS together.</p>
+  <p>We will cover basic topics step by step.</p>
+  <p>Each section has a header and some text.</p>
+  <p>The navigation links on the left jump to each section.</p>
+  <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+  <ul>
+    <li>Easy to read</li>
+    <li>Beginner friendly</li>
+    <li>Only HTML and CSS</li>
+  </ul>
+</section>
+
+    
+
+    <section class="main-section" id="HTML_Basics">
+      <header>HTML Basics</header>
+      <p>HTML is the structure of a webpage.</p>
+      <p>It uses tags like &lt;p&gt; for paragraphs and &lt;h1&gt; for headings.</p>
+      <p>Every page starts with &lt;!DOCTYPE html&gt; and &lt;html&gt; tags.</p>
+      <p>Inside &lt;body&gt; you put the content that shows on the page.</p>
+      <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+      <ul>
+        <li>&lt;h1&gt; to &lt;h6&gt; for headings</li>
+        <li>&lt;p&gt; for text paragraphs</li>
+        <li>&lt;a&gt; for links</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="CSS_Basics">
+      <header>CSS Basics</header>
+      <p>CSS adds style to your HTML.</p>
+      <p>You can change colors, fonts, and layout.</p>
+      <p>CSS rules look like this:</p>
+      <code>
+p {
+  color: blue;
+  font-size: 16px;
+}
+      </code>
+      <p>Selectors choose elements, properties change how they look.</p>
+      <ul>
+        <li>color changes text color</li>
+        <li>background-color changes background</li>
+        <li>margin and padding add space</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Responsive_Design">
+      <header>Responsive Design</header>
+      <p>Responsive design means your page looks good on all devices.</p>
+      <p>You can use percentages or relative units like em and rem.</p>
+      <p>Media queries let you change styles for different screen sizes.</p>
+      <code>
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+      </code>
+      <p>This example makes text smaller on small screens.</p>
+      <ul>
+        <li>Use flexible layouts</li>
+        <li>Test on phone and computer</li>
+        <li>Keep it simple</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Summary">
+      <header>Summary</header>
+      <p>You learned the basics of HTML and CSS.</p>
+      <p>You saw how to make a simple documentation page.</p>
+      <p>You also saw how to make it responsive.</p>
+      <p>Practice by adding more sections and styles.</p>
+      <code>&lt;section&gt;New content here&lt;/section&gt;</code>
+      <ul>
+        <li>HTML = structure</li>
+        <li>CSS = style</li>
+        <li>Responsive = works everywhere</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+#navbar header {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+
+#main-doc {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+
+.main-section {
+  margin-bottom: 40px;
+}
+
+.main-section header {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+
+code {
+  display: block;
+  background: #eee;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #main-doc {
+    margin-left: 0;
+  }
+}
+
+
+** end of styles.css **
+

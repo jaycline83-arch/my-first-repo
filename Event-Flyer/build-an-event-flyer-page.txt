@@ -1,0 +1,69 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">  
+  <title>Build an Event Flyer Page</title>
+  </head>
+<body>
+  <header>
+    <img src="https://cdn.freecodecamp.org/curriculum/labs/event.jpg" alt="rainbow colored streamers stretched across a street with a building in the background">
+    <h1>Hookahville 2025</h1>
+    <hr>
+  </header>
+<main>
+  <section>
+    <h2>Friday</h2>
+    <ol>
+      <li>3 Days Grace</li>
+      <li>Seether</li>
+      <li>Metallica</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Saturday</h2>
+    <ol>
+      <li>Blacktop Mojo</li>
+      <li>Shinedown</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Sunday</h2>
+    <ol>
+      <li>Disturbed</li>
+      <li>Five Finger Death Punch</li>
+    </ol>
+  </section>
+</main>
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto 0 auto;
+  width: 100vw;
+  min-height: calc(100vh - 100px);
+}
+hr {
+  width: 100%;
+}
+main {
+  width: 100%;
+}
+section {
+  width: 100%;
+}
+
+** end of styles.css **
+

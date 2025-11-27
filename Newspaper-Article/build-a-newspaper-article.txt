@@ -1,0 +1,83 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Article</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="newspaper">
+      <div class="name">The Daily Byte</div>
+      <div class="date">November 5, 2025</div>
+      <div class="headline">Tech Breakthrough Shocks the World</div>
+      <div class="sub-headline">AI Achieves Human-Level Creativity</div>
+      <div class="author">By Jay Rivera</div>
+      <p class="text">Artificial intelligence has reached a new milestone, astonishing researchers and the public alike with its ability to compose music, write novels, and even paint masterpieces.</p>
+      <p class="text">Experts believe this breakthrough could revolutionize industries, but also raises ethical questions about the role of machines in creative fields.</p>
+    </div>
+
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+html {
+  font-size: 24px;
+}
+
+.newspaper {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.name {
+  font-size: 2rem;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+}
+
+.date {
+  margin-bottom: 10px;
+}
+
+.headline {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.sub-headline {
+  font-weight: 100;
+  font-size: 1.5em;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.author {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text {
+  text-indent: 20px;
+  line-height: 2em;
+  margin-bottom: 15px;
+}
+
+.text::first-letter {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+** end of styles.css **
+
